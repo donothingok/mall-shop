@@ -2,7 +2,7 @@
 
 商城系统基础脚手架（前后端分离）：
 
-- `mall-backend`: Spring Boot 后端接口（模块化单体）
+- `mall-backend`: Spring Boot + Sa-Token 后端接口（模块化单体）
 - `mall-web-store`: Vue3 前台 H5
 - `mall-admin`: Vue3 管理后台
 - `mall-mini`: uni-app 小程序
@@ -32,3 +32,16 @@ npm run dev
 
 ### 4) uni-app
 使用 HBuilderX 或 `@dcloudio/uni-app` CLI 打开 `mall-mini`。
+
+## 后端演示账号
+
+- 用户账号：`user / 123456`
+- 管理账号：`admin / 123456`
+
+## 后端演示流程
+
+1. 登录：`POST /api/v1/public/auth/login`
+2. 查看商品：`GET /api/v1/public/products`
+3. 加入购物车：`POST /api/v1/cart/items`
+4. 创建订单：`POST /api/v1/orders`
+5. 管理看板：`GET /api/v1/admin/dashboard`（需 admin 角色）
